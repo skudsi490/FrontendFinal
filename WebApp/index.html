@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleAPI2.css">
+    <title>Weather Now</title>
+</head>
+<body>
+    <header>
+        <div class="title_logo">
+            <div class="logo">
+                <a class="title_text" href="./index.html">
+                    <img class="main_logo" src="/axd/logos_icons/main_logo.png" alt="Main logo">
+                </a>
+            </div>
+            <span class="search_wrapper">
+    <form class="searchBar">
+        <div class="search_elements">
+            <input type="text" class="cityInput" placeholder="Enter city">
+            <img src="./logos_icons/location.jpg" alt="Use Current Location" class="locationButton" title="Use Current Location" />
+        </div>
+        <ul class="suggestions"></ul>
+        
+    </form>
+</span>
+
+        </div>
+
+        <nav class="navigation">
+            <a class= "navigation_item" href="./index.html">Home</a>
+            <a class= "navigation_item" href="./aboutus.html">About us</a>
+            <a class= "navigation_item" href="./contactus.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+    <div class="main_content">
+        <div class="weather_container">
+            <img class="weather_visualizer"> 
+            <div class="half1">
+            <div class="weather_text">
+                <h3 class="weather_city"></h3>
+                <img class="weather_icon" alt="Weather icon">
+                <span class="weather_degrees"></span>
+                <button id="toggleFahrenheit" class="toggle-btn">Change to Fahrenheit</button>
+                <p class="weather_date"></p>
+                <p class="weather_time"></p>
+            </div>  
+            </div>
+            <div class="half2">
+            <div class="weather_detailscontainer">
+            <img src="/axd/logos_icons/feels-like.svg" alt="humidity" width="20px" height="20px">
+                <p class="feels_like_detail">Feels Like</p>
+            <img src="/axd/logos_icons/wind-gusts.svg" alt="humidity" width="20px" height="20px">
+                <p class="weather_description">Weather Condition</p>
+                
+            </div>
+    </div>
+        
+    </div>
+
+    <div class="weekly_forecast">
+        <div class="day_forecast">
+            <div class="date_name">
+                <p class="day_date"></p>
+                <p class="day_name"></p>
+            </div>
+            <img class="day_icon" alt="Weather icon">
+            <p class="day_temp"></p>
+        </div>
+        <div class="day_forecast">
+            <div class="date_name">
+                <p class="day_date"></p>
+                <p class="day_name"></p>
+            </div>
+            <img class="day_icon" alt="Weather icon">
+            <p class="day_temp"></p>
+        </div>
+        <div class="day_forecast">
+            <div class="date_name">
+                <p class="day_date"></p>
+                <p class="day_name"></p>
+            </div>
+            <img class="day_icon" alt="Weather icon">
+            <p class="day_temp"></p>
+        </div>
+        <div class="day_forecast">
+            <div class="date_name">
+                <p class="day_date"></p>
+                <p class="day_name"></p>
+            </div>
+            <img class="day_icon" alt="Weather icon">
+            <p class="day_temp"></p>
+        </div>
+        <div class="day_forecast">
+            <div class="date_name">
+                <p class="day_date"></p>
+                <p class="day_name"></p>
+            </div>
+            <img class="day_icon" alt="Weather icon">
+            <p class="day_temp"></p>
+        </div>
+    </div>
+    </div>
+
+    <div class="additional_boxes">
+
+        <div class="additional_box" id="box1">
+            <canvas id="hourlyChart"></canvas>
+        </div>
+
+        <div class="additional_box" id="box2">
+
+            <div class="container_top">
+                <div class="sunrise_container">
+                    <img class="sunmoon_icon" src="/axd\logos_icons\sunrise.svg" alt="sunrise">
+                    <p>Sunrise</p>
+                    <p class="sunrise_time">--:--</p> 
+                </div>
+    
+                <div class="sunset_container">
+                    <img class="sunmoon_icon" src="/axd\logos_icons\sunset.svg" alt="sunset">
+                    <p>Sunset</p>
+                    <p class="sunset_time">--:--</p> 
+                </div>
+            </div>
+            
+            
+            <div class="container_bottom">
+                <div class="moonrise_container">
+                    <img class="sunmoon_icon"  src="/axd\logos_icons\moon1.svg" alt="sunrise">
+                    <p>Moonrise</p>
+                    <p class="moonrise_time">--:--</p> 
+                </div>
+    
+                <div class="moonset_container">
+                    <img class="sunmoon_icon"  src="/axd\logos_icons\moon1.svg" alt="sunset">
+                    <p>Moonset</p>
+                    <p class="moonset_time">--:--</p> 
+                </div>
+            </div>
+        </div>
+        <div class="additional_box" id="box3">
+            <div>
+                <img src="/axd/logos_icons/humidity.svg" alt="humidity" width="20px" height="20px">
+                <p class="humidity_detail">Humidity</p>
+            </div>
+            <div>
+                <img src="/axd/logos_icons/pressure.svg" alt="pressure" width="20px" height="20px">
+                <p class="pressure_detail">Pressure</p>
+            </div>
+            <div>
+                <img src="/axd/logos_icons/wind.svg" alt="wind" width="20px" height="20px">
+                <p class="wind_detail">Wind</p>
+            </div>
+            <div>
+                <img src="/axd/logos_icons/air_quality.svg" alt="wind" width="20px" height="20px">
+                <p class="air_detail">Air Pollution</p>
+            </div>
+            <div class="button_container">
+                <div>
+                    <button id="summaryButton">Weather Overview</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<div id="summaryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="weather_summary"></p>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="countryNames.js"></script>
+    <script src="weatherAPI.js"></script>
+    <script src="weatherDisplay.js"></script>
+    <script src="errorHandling.js"></script>
+    <script src="helpers.js"></script>
+    <script src="app.js"></script>
+    <footer></footer>
+</body>
+
+</html>

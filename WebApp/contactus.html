@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styleAPI2.css">
+        <title>Weather Now</title>
+    </head>
+<body>
+    <header>
+        <div class="title_logo">
+            <div class="logo">
+                <a class="title_text" href="./index.html">
+                    <img class="main_logo" src="/axd/logos_icons/main_logo.png" alt="Main logo">
+                </a>
+            </div>
+            <span class="search_wrapper">
+    <form class="searchBar">
+        <div class="search_elements">
+            <input type="text" class="cityInput" placeholder="Enter city">
+            <button type="submit">Get Weather</button>
+            <img src="./logos_icons/location.jpg" alt="Use Current Location" class="locationButton" title="Use Current Location" />
+        </div>
+        <ul class="suggestions"></ul>
+
+    </form>
+</span>
+
+        </div>
+
+        <nav class="navigation">
+            <a class= "navigation_item" href="./index.html">Home</a>
+            <a class= "navigation_item" href="./aboutus.html">About us</a>
+            <a class= "navigation_item" href="./contactus.html">Contact</a>
+        </nav>
+    </header>
+<main>
+<body>
+    <form action="https://api.web3forms.com/submit" method="POST" class="main_container">
+        <h1>Contact Us</h1>
+        <input type="hidden" name="access_key" value="a92b5363-0ac6-4dbd-9a33-4cd8aef1c892">
+        <div>
+            <input class="input" name="name"text" placeholder="Name" required>
+        </div>
+        <div>
+            <input class="input" name="email"placeholder="Email" required>
+        </div>
+        <div class="message">
+            <textarea class="input" name=message" rows="10" placeholder="Message"></textarea>
+        </div>
+        <button class="submit_button" type="submit">Submit</button>
+    </form>
+    
+
+    </body>
+    </main>
+
+    <style>
+        :root {
+            --main_color: #4b216d;
+            --dark_purple: #893a8a;
+            --white_text-input: #FFFFFF;
+            --gray: #D9D9D9;
+        }
+
+        main {
+            margin: 0 5% 5% 5%;
+        }
+
+        h1 {
+            color: var(--dark_purple);
+            font-size: 50px;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-top: 5rem;
+        }
+
+        .main_container {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .main_container > div {
+            background-color: var(--gray);
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .message {
+            height: 15rem;
+        }
+
+        .submit_button {
+            background-color: var(--dark_purple);
+            color:var(--white_text-input);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .input {
+            font-size: 1.2rem;
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--dark_purple);
+        }
+
+        .submit_button:hover {
+            background-color: var(--main_color);
+        }
+
+        @media (max-width: 768px) {
+           
+            main {
+                margin: 0 10% 5% 10%;
+            }
+        }
+
+    </style>
+</body>
+</html>

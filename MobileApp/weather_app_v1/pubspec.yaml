@@ -1,0 +1,79 @@
+name: weather_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  # Add dependencies for HTTP requests and geolocation
+  http: ^1.2.1
+  geolocator: ^12.0.0
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.0.13
+  flutter_svg: ^2.0.0
+  intl: ^0.19.0
+  animated_splash_screen: ^1.2.0
+  smooth_page_indicator: ^1.0.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/world.png
+    - assets/images/world2.png
+    - assets/images/app_icon.png
+    - assets/images/app_icon_foreground.png
+    - assets/images/logo.png
+    - assets/images/welcome.png
+    - assets/vectors/category.svg
+    - assets/vectors/down_arrow.svg
+    - assets/vectors/pressure.svg
+    - assets/vectors/search.svg
+    - assets/vectors/wind.svg
+    - assets/vectors/feels-like.svg
+    - assets/vectors/humidity.svg
+    - assets/vectors/sunrise.svg
+    - assets/vectors/sunset.svg
+    - assets/vectors/wind-gusts.svg
+    - assets/vectors/air-quality.svg
+    - assets/vectors/visibility.svg
+    - assets/svgs/cloudRainLow.svg
+    - assets/svgs/cloudRainMiddle.svg
+    - assets/svgs/cloudRainStrong.svg
+    - assets/svgs/cloudWind.svg
+    - assets/svgs/cloudy.svg
+    - assets/svgs/cloudyRain.svg
+    - assets/svgs/cloudySnow.svg
+    - assets/svgs/moon.svg
+    - assets/svgs/moonSnow.svg
+    - assets/svgs/moonThunder.svg
+    - assets/svgs/moonThunderFlash.svg
+    - assets/svgs/moonThunderSnowball.svg
+    - assets/svgs/moonWind.svg
+    - assets/svgs/sun.svg
+    - assets/svgs/sunCloudy.svg
+    - assets/svgs/sunSnow.svg
+    - assets/svgs/sunThunder.svg
+    - assets/svgs/sunThunderFlash.svg
+    - assets/svgs/sunThunderRain.svg
+    - assets/svgs/sunThunderSnowball.svg
+    - assets/svgs/sunWind.svg
+    - assets/svgs/thunder.svg
+    - assets/svgs/thunderMoonRain.svg
+    - assets/svgs/thunderSnow.svg
+    - assets/svgs/thunderSnowball.svg
+    - assets/svgs/thunderWind.svg
